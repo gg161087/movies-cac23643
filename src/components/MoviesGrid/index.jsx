@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { MovieCard } from '../MovieCard/index.jsx';
 import { getDynamic } from '../../utils/httpClient.js';
@@ -17,8 +18,10 @@ export const MoviesGrid = ({page}) => {
     
     return (
         <div className="container">
-            {movies.map((movie) => (   
-                <MovieCard movie={movie} key={movie.id}></MovieCard>            
+            {movies.map((movie) => (
+                <Link key={movie.id}>
+                    <MovieCard movie={movie} key={movie.id}></MovieCard>            
+                </Link>   
             ))}            
         </div>
     )

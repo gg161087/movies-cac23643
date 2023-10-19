@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 import { LandingPage } from '../Pages/LandingPage/index.jsx';
 
 import './App.css'
@@ -5,9 +7,11 @@ import './App.css'
 function App() {    
 
     return (
-        <>
-            <LandingPage></LandingPage>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<LandingPage/>}/>          
+            </Routes>                       
+        </BrowserRouter>    
     )
 }
 

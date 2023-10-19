@@ -9,23 +9,24 @@ import './LandingPage.css'
 export const LandingPage = () => {
     const buttons = [{id:'btn_previus', text:'Anterior'}, {id:'btn_next', text:'Siguiente'}]
 
-    const [page, setPage] = useState(1)
-    useEffect(() =>{        
-        setPage(page)
-    })
-
+    let [page, setPage] = useState(1)
+    
     const handleButtonClick = (id) => {
         // Aquí puedes manejar los eventos de los botones según el id
         if (id === 'btn_previus') {
             // Lógica para el botón 'Anterior'
-            page -= 1    
+            setPage(page -= 1)    
             console.log(`'Botón Anterior presionado' ${page}`);
         } else if (id === 'btn_next') {
             // Lógica para el botón 'Siguiente'
-            page += 1           
+            setPage(page += 1)           
             console.log(`'Botón Siguiente presionado' ${page}`);
         }
     };
+
+    useEffect(() => {
+        
+    }, [])
 
     return (
         <>
