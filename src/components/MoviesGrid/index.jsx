@@ -6,16 +6,8 @@ import { getDynamic } from '../../utils/httpClient.js';
 
 import './MoviesGrid.css'
 
-export const MoviesGrid = ({page}) => {    
+export const MoviesGrid = ({movies}) => {    
 
-    const [movies,setPeliculas]= useState([])
-
-    useEffect(()=>{
-        getDynamic(`/discover/movie?page=${page}`).then((data)=>{        
-            setPeliculas(data.results)
-        })
-    },[])
-    
     return (
         <div className="container">
             {movies.map((movie) => (

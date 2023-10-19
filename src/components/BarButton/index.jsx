@@ -1,14 +1,10 @@
 import './BarButton.css';
 
-export const BarButton = ({buttons, onButtonClick}) => {
+export const BarButton = ({ handleNextPage, handlePreviousPage }) => {
     return (
         <>
-            {buttons.map((button) => (
-                <button className='bar_button' key={button.id} onClick={() => onButtonClick(button.id)}>
-                    {button.text}
-                </button>
-            ))}
-        </>
-        
+            <button className='bar_button' onClick={handlePreviousPage}>Anterior</button>
+            <button className='bar_button' onClick={handleNextPage}>Siguiente</button>
+        </>  
     )
 }

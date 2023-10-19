@@ -1,1 +1,2 @@
-import './DetailMovie.css'
+import './DetailMovie.css';
+
