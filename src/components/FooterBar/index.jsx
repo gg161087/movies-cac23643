@@ -2,18 +2,14 @@ import { BarButton } from '../BarButton/index.jsx';
 
 import './FooterBar.css'
 
-export const FooterBar = ({buttons}) => {
+export const FooterBar = ({buttons, onButtonClick}) => {
     return (
         <div className="footerbar">
             <div className="footerbar__container">            
                 <div className="footerbar__buttons">
-                {
-                    buttons.map((button) =>(
-                        <BarButton id={button.id} key={button.id} text={button.text}></BarButton>
-                    ))
-                }    
+                    <BarButton buttons={buttons} onButtonClick={onButtonClick}></BarButton>                     
                 </div>
-                <small>Todos los derechos reservados</small>
+                <small className="footerbar__copyright">Todos los derechos reservados ©</small>
             </div>
         </div>
     )

@@ -8,9 +8,9 @@ export const MovieCard = ({movie}) => {
                 <img className="" src={imgUrl} alt={`poster de la pelicula ${movie.title}`} />
             </div>
             <div className="card__description">
-                <h3 className="card__title">{movie.title}</h3>
-                <h4>{`Puntuación: ${movie.vote_average}`}</h4>
-                <h5>{`Votantes: ${movie.vote_count}`}</h5>
+                <h2 className="card__title">{movie.title}</h2>
+                <p>{`Puntuación: ${movie.vote_average}`}</p>
+                <small>{`Votantes: ${movie.vote_count}`}</small>
             </div>
         </div>
     )

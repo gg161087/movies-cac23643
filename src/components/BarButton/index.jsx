@@ -1,7 +1,14 @@
 import './BarButton.css';
 
-export const BarButton = ({id, text}) => {
+export const BarButton = ({buttons, onButtonClick}) => {
     return (
-        <button className='bar_button' id={id}>{text}</button>
+        <>
+            {buttons.map((button) => (
+                <button className='bar_button' key={button.id} onClick={() => onButtonClick(button.id)}>
+                    {button.text}
+                </button>
+            ))}
+        </>
+        
     )
 }
