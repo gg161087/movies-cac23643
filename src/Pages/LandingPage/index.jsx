@@ -9,7 +9,7 @@ import './LandingPage.css'
 export const LandingPage = () => {
     const buttons = [{id:'btn_previus', text:'Anterior'}, {id:'btn_next', text:'Siguiente'}]
 
-    const [page, setPage] = useState()
+    const [page, setPage] = useState(1)
     useEffect(() =>{        
         setPage(page)
     })
