@@ -9,9 +9,9 @@ import './MoviesGrid.css'
 export const MoviesGrid = ({movies}) => {    
 
     return (
-        <div className="container">
+        <div className="moviesGrid">
             {movies.map((movie) => (
-                <Link key={movie.id}>
+                <Link to={`/movie/${movie.id}`} key={movie.id}>
                     <MovieCard movie={movie} key={movie.id}></MovieCard>            
                 </Link>   
             ))}            

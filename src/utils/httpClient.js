@@ -5,15 +5,15 @@ const TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwNTEyM2E0MGFmYmUxMTI3NDNiYTczZDk4
 
 const options = {
     method: 'GET',
-    headers: {
-        accept: 'application/json',
-        Authorization: `Bearer ${TOKEN}`
+    headers: {        
+        Authorization: `Bearer ${TOKEN}`,  
+        'Content-Type': 'application/json;charset=utf-8',
     }
 };
 
 export const getDynamic = async(path) => {
     try {  
-        const response = await axios(API + path, options);        
+        const response = await axios(API + path, options);               
         return response.data;
     } catch (error) {
         console.error("Error fetching data: ", error);

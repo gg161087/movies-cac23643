@@ -1,5 +1,10 @@
+import { Link } from 'react-router-dom';
+
+import './HomeButton.css';
+
 export const HomeButton = () => {
+   
     return (
-        <button></button>
+        <Link to={'/'} className='bar_button'>Volver</Link>   
     )
 }
